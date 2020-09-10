@@ -15,7 +15,8 @@ My main goal is to become a successful developer. I'm very interested in studyin
 
 ### Code example
 ##### Python bot, which converts text into speech
-`from gtts import gTTS
+```python
+from gtts import gTTS
 import config
 import os
 import telebot
@@ -39,7 +40,8 @@ def reg_name(message):
     output.save("output.ogg")
     voice = open('output.ogg', 'rb')
     bot.send_voice(message.chat.id, voice)
-bot.polling(none_stop=True)`
+bot.polling(none_stop=True)
+```
 
 ### English level
 B2+
