@@ -15,4 +15,7 @@ My main goal is to become a successful developer. I'm very interested in studyin
 
 ### Code example
 ##### Python bot, which converts text into speech
-![Code example](example.png)
+![Code example](/example.png)
+
+### English level
+B2+
