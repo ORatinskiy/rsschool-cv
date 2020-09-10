@@ -7,3 +7,8 @@
 ### Summary
 My main goal is to become a successful developer. I'm very interested in studying something new that will help me in future. I understand that I always have to improve skills to be up to date. In addition, I hate wasting my precious time.
 
+### Skills
+* HTML Basics
+* CSS Basics
+* JS Basics
+* Python Basics
