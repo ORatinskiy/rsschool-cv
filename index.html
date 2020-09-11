@@ -43,33 +43,33 @@
         <section>
             <h3>Code example</h3>
             <h4>Python bot, which converts text into speech</h4>
-            <pre>
+            <pre class="code">
                 <code>
-from gtts import gTTS
-import config
-import os
-import telebot
-bot = telebot.TeleBot(config.token)
-name = ''
+<span id="purple" class="italic">from</span>  gtts <span id="purple" class="italic">import</span> gTTS
+<span id="purple" class="italic">import</span> config
+<span id="purple" class="italic">import</span> os
+<span id="purple" class="italic">import</span> telebot
+bot = telebot.<span id="blue">TeleBot</span>(config.token)
+name = <span id="green">''</span> 
  
  
-@bot.message_handler(commands=['start'])
-def start_message(message):
-    bot.send_message(message.chat.id, 'Привіт, введи своє ім\'я')
+<span id="blue">@bot</span>.<span id="blue">message_handler</span>(<span id="red" class="italic">commands</span><span id="blue"> = </span>[<span id="green">'start'</span>])
+<span id="purple">def</span> <span id="blue">start_message</span>(<span id="orange" class="italic">message</span>):
+    bot.<span id="blue">send_message</span>(message.chat.id, <span id="green">'Привіт, введи своє ім</span><span id="blue">\'</span><span id="green">я'</span>)
  
  
-@bot.message_handler(func=lambda m: True)
-def reg_name(message):
-    global name
-    name = message.text
-    myText = "Привіт "
-    myText += name
-    language = 'uk'
-    output = gTTS(text=myText, lang=language, slow=False)
-    output.save("output.ogg")
-    voice = open('output.ogg', 'rb')
-    bot.send_voice(message.chat.id, voice)
-bot.polling(none_stop=True)
+<span id="blue">@bot</span>.<span id="blue">message_handler</span>(<span id="red" class="italic">func</span><span id="blue"> = </span><span id="purple">lambda</span> <span id="orange" class="italic">m</span><span id="blue">:</span> <span id="orange">True</span>)
+<span id="purple">def</span> <span id="blue">reg_name</span>(<span id="orange" class="italic">message</span>):
+    <span id="purple">global</span> name
+    name<span id="blue"> = </span>message.text
+    myText<span id="blue"> = </span><span id="green">"Привіт "</span>
+    myText<span id="blue"> += </span>name
+    language<span id="blue"> = </span><span id="green">'uk'</span>
+    output<span id="blue"> = </span><span id="blue">gTTS</span>(<span id="red" class="italic">text</span><span id="blue"> = </span>myText, <span id="red" class="italic">lang</span><span id="blue"> = </span>language, <span id="red" class="italic">slow</span><span id="blue"> = </span><span id="orange">False</span>)
+    output.<span id="blue">save</span>(<span id="green">"output.ogg"</span>)
+    voice<span id="blue"> = open</span>(<span id="green">'output.ogg'</span>,<span id="green"> 'rb'</span>)
+    bot.<span id="blue">send_voice</span>(message.chat.id, voice)
+bot.<span id="blue">polling</span>(<span id="red" class="italic">none_stop</span><span id="blue"> = </span><span id="orange">True</span>)
                 </code>
             </pre>
         </section>
